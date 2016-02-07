@@ -77,3 +77,6 @@ print("vec1: ", vec1)
 print("vec2: ", vec2)
 print("res: ", [x*y for x in vec1 for y in vec2])
 print("res: ", [x+y for x in vec1 for y in vec2])
+print("res: ", [vec1[i]*vec2[i] for i in range(len(vec1))])
+print("res: ", [str(round(355/113.0, i)) for i in range(1,6)])
+del vec, vec1, vec2
