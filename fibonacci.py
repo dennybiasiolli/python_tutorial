@@ -6,9 +6,11 @@ if(len(sys.argv) > 1):
     try:
         l = int(sys.argv[1])
     except ValueError:
-        print("Inserire un valore intero!, Ora verrà impostato di default a 10")
+        print("Inserire un valore intero! Ora verrà impostato di default a 10\n")
+else:
+    print("Nessun parametro inserito, verrà impostato di default a 10\n")
 print("Sequenza di Fibonacci per i primi " + str(l) + " numeri")
-a, b, i = 0, 1, 0
-while i < l:
+a, b = 0, 1
+for i in range(l):
     print(b)
-    a, b, i = b, a+b, i+1
+    a, b = b, a+b
