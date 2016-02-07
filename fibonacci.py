@@ -1,6 +1,16 @@
+import sys
+
 # La serie di Fibonacci:
 # la somma di due elementi definisce l'elemento successivo
-import sys
+def fib(n): # restituisce la serie di Fibonacci fino a n
+    result = []
+    a, b = 0, 1
+    for i in range(n):
+        result.append(b)    # vedi sotto
+        a, b = b, a+b
+    return result
+
+
 l = 10
 if(len(sys.argv) > 1):
     try:
@@ -10,7 +20,4 @@ if(len(sys.argv) > 1):
 else:
     print("Nessun parametro inserito, verrà impostato di default a 10\n")
 print("Sequenza di Fibonacci per i primi " + str(l) + " numeri")
-a, b = 0, 1
-for i in range(l):
-    print(b)
-    a, b = b, a+b
+print(fib(l))

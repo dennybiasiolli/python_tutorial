@@ -1,4 +1,17 @@
 import sys
+
+# controlla se n è un numero primo
+def isPrimo(n):
+    for x in range(2, n):
+        if n % x == 0:
+            # print(n, 'non è un numero primo, è uguale a', x, '*', int(n/x))
+            return False
+            break
+    else:
+        # Il ciclo scorre la sequenza senza trovare il fattore
+        # print(n, 'è un numero primo')
+        return True
+
 n = 191
 if(len(sys.argv) > 1):
     try:
@@ -8,11 +21,7 @@ if(len(sys.argv) > 1):
 else:
     print("Nessun parametro inserito, verrà impostato di default a", n, "\n")
 
-# for n in range(2, 10):
-for x in range(2, n):
-    if n % x == 0:
-        print(n, 'non è un numero primo, è uguale a', x, '*', int(n/x))
-        break
-else:
-    # Il ciclo scorre la sequenza senza trovare il fattore
+if(isPrimo(n)):
     print(n, 'è un numero primo')
+else:
+    print(n, 'non è un numero primo')
