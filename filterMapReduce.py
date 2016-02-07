@@ -48,3 +48,32 @@ print()
 from functools import reduce
 retVal = reduce(add, a)
 print("Somma dei numeri:", retVal)
+
+
+
+
+print()
+print('------------------ COSTRUZIONI DI LISTA ------------------')
+# Le costruzioni di lista forniscono un modo conciso per creare liste senza ricorrere all'uso di map(), filter() e/o lambda.
+# La definizione risultante è spesso più comprensibile di ciò che si ottiene con i costrutti accennati.
+# Ogni costruzione di lista consiste di un'espressione a cui segue una clausola for, quindi zero o più clausole for o if.
+# Il risultato sarà una lista creata valutando l'espressione nel contesto delle clausole for e if che la seguono.
+# Se l'espressione valuta una tupla, questa dev'essere racchiusa tra parentesi.
+freshfruit = ['  banana', '  loganberry ', 'passion fruit  ']
+print("freshfruit: ", freshfruit)
+print("res: ", [weapon.strip() for weapon in freshfruit])
+
+vec = [2, 4, 6]
+print("vec: ", vec)
+print("res: ", [3*x for x in vec])
+print("res: ", [3*x for x in vec if x > 3])
+print("res: ", [3*x for x in vec if x < 2])
+print("res: ", [[x,x**2] for x in vec])
+print("res: ", [(x, x**2) for x in vec])
+
+vec1 = [2, 4, 6]
+vec2 = [4, 3, -9]
+print("vec1: ", vec1)
+print("vec2: ", vec2)
+print("res: ", [x*y for x in vec1 for y in vec2])
+print("res: ", [x+y for x in vec1 for y in vec2])
